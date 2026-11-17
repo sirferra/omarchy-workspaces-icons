@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "lean.workspaces",
+  "name": "Workspaces with app icons",
+  "version": "1.0.0",
+  "author": "lean",
+  "description": "Workspace numbers when empty, app icons for one window, and a split marker for multiple windows",
+  "kinds": ["bar-widget"],
+  "entryPoints": {
+    "barWidget": "Workspaces.qml"
+  },
+  "barWidget": {
+    "displayName": "Workspaces with app icons",
+    "description": "Workspace numbers and app icons",
+    "category": "Compositor",
+    "allowMultiple": false,
+    "defaultSection": "left"
+  },
+  "omarchy": {
+    "clonedFrom": "omarchy.workspaces"
+  }
+}
