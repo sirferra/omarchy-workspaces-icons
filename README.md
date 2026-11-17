@@ -1,3 +1,5 @@
+<img width="267" height="50" alt="imagen" src="https://github.com/user-attachments/assets/fc6c519e-1405-4a74-b4f0-90454ffe624d" />
+
 # Workspace Icons for Omarchy
 
 A widget for the Omarchy bar that shows the icon of the open application in each workspace. Empty workspaces keep their number. When a workspace has multiple windows, it shows two split icons; occupied workspaces also keep a small number. The active workspace has an indicator underneath.
