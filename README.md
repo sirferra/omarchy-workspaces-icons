@@ -1,33 +1,37 @@
-# Workspaces con iconos para Omarchy
+# Workspace Icons for Omarchy
 
-Widget para la barra de Omarchy que muestra el icono de la aplicación abierta en cada espacio de trabajo. Los espacios vacíos conservan su número. Si hay varias ventanas, muestra dos iconos partidos; los espacios ocupados también conservan un número pequeño. El espacio activo tiene una marca inferior.
+A widget for the Omarchy bar that shows the icon of the open application in each workspace. Empty workspaces keep their number. When a workspace has multiple windows, it shows two split icons; occupied workspaces also keep a small number. The active workspace has an indicator underneath.
 
-Es la personalización `lean.workspaces` extraída de mi configuración de Omarchy. Se basa en el widget `omarchy.workspaces` y usa las mismas asignaciones de espacios de trabajo y monitores. Los iconos se buscan entre los launchers y el tema de iconos instalados en la PC; no se incluyen aplicaciones ni iconos en este repo.
+This is the `sirferra.workspaces` customization from my Omarchy configuration. It is based on the `omarchy.workspaces` widget and uses the same workspace and monitor assignments. Icons are found among the desktop launchers and icon theme installed on your computer; this repository does not include any applications or icons.
 
-## Instalar desde Git
+## Install from Git
 
-Requiere Omarchy con `omarchy plugin add` (preparado con Omarchy 4.5.0-3). Con la sesión gráfica de Omarchy iniciada:
+Requires an Omarchy version that supports `omarchy plugin add` (prepared with Omarchy 4.5.0-3). With an Omarchy graphical session running:
 
 ```bash
-omarchy plugin add https://github.com/TU_USUARIO/omarchy-workspaces-icons.git --enable
+omarchy plugin add https://github.com/sirferra/omarchy-workspaces-icons.git --enable
 ```
 
-Reemplaza automáticamente `omarchy.workspaces` en la barra gracias a `clonedFrom`. Si el widget estándar no estaba en la barra, se agrega a la sección izquierda.
+It automatically replaces `omarchy.workspaces` in the bar through `clonedFrom`. If the standard widget was not in the bar, this one is added to the left section.
 
-Para instalarlo sin GitHub, copiá `manifest.json` y `Workspaces.qml` a `~/.config/omarchy/plugins/lean.workspaces/`, ejecutá `omarchy-shell shell rescanPlugins` y después `omarchy plugin enable lean.workspaces`.
+To install it without GitHub, copy `manifest.json` and `Workspaces.qml` to `~/.config/omarchy/plugins/sirferra.workspaces/`, run `omarchy-shell shell rescanPlugins`, and then run `omarchy plugin enable sirferra.workspaces`.
 
-## Personalizar iconos
+## Customize icons
 
-Editá `iconOverrides` al comienzo de `Workspaces.qml` para asociar el `class` o `appId` de una ventana con un icono instalado. Omarchy recarga los plugins de usuario al guardar. Podés consultar la clase de la ventana activa con:
+Edit `iconOverrides` near the beginning of `Workspaces.qml` to map a window's `class` or `appId` to an installed icon. Omarchy reloads user plugins when you save the file. To check the class of the active window, run:
 
 ```bash
 hyprctl activewindow -j | jq -r '.class'
 ```
 
-## Quitar
+## Remove
 
 ```bash
-omarchy plugin remove lean.workspaces
+omarchy plugin remove sirferra.workspaces
 ```
 
-Omarchy restaura el widget estándar al quitar este clon.
+Omarchy restores the standard widget when you remove this clone.
+
+## License
+
+MIT. See [LICENSE](LICENSE). Based on Omarchy's workspace widget; the original copyright notice is retained in the license.

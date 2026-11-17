@@ -8,7 +8,7 @@ import qs.Ui
 
 BarWidget {
   id: root
-  moduleName: "lean.workspaces"
+  moduleName: "sirferra.workspaces"
 
   // Hyprland class / app ID -> icon name from the installed desktop launchers.
   // Add an entry here if a window reports an unexpected class.

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "id": "lean.workspaces",
+  "id": "sirferra.workspaces",
   "name": "Workspaces with app icons",
   "version": "1.0.0",
-  "author": "lean",
+  "author": "sirferra",
   "description": "Workspace numbers when empty, app icons for one window, and a split marker for multiple windows",
   "kinds": ["bar-widget"],
   "entryPoints": {
